@@ -1,16 +1,24 @@
-def count_chars(str):
-     upper_ctr, lower_ctr, number_ctr, special_ctr = 0, 0, 0, 0
-     for i in range(len(str)):
-          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1
-          elif str[i] >= 'a' and str[i] <= 'z': lower_ctr += 1
-          elif str[i] >= '0' and str[i] <= '9': number_ctr += 1
-          else: special_ctr += 1
-     return upper_ctr, lower_ctr, number_ctr, special_ctr
-           
+print("enter * to exit")
+a=[]
+c,d,e,f=0,0,0,0
+for i in range(0,100):
+   b=input ("enter the element:") 
+   if(b== '*'):
+       break
+   else:
+      a.append(b)
+for i in a:
+    if(i.isupper()): 
+        c+=1
+    elif(i.islower()):
+        d+=1
+    elif(i.isnumeric()):
+        e+=1
+    else:
+        (i.isdecimal())
+        f+=1
 
-print("Original Substrings:",str)
-u, l, n, s = count_chars(str)
-print('\nUpper case characters: ',u)
-print('Lower case characters: ',l)
-print('Number case: ',n)
-print('Special case characters: ',s)
+print("no of lowercase element",d)
+print("no of uppercase element",c) 
+print("no of numbers ",e)
+print("no of special ",f)
